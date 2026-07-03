@@ -11,4 +11,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-CMD ["python", "Мухина_Милана_БИС-24-2.py"]
+CMD ["python", "Мухина_Милана_БИС_24_2.py"]

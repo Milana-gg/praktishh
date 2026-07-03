@@ -16,7 +16,7 @@ git clone https://github.com/Milana-gg/praktishh.git
 
 cd praktish
 pip install -r requirements.txt
-python "Мухина_Милана_БИС-24-2.py"
+python "Мухина_Милана_БИС_24_2.py"
 ```
 ## Автор
 Мухина Милана Алексеевна, группа БИС-24-2

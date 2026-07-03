@@ -154,9 +154,9 @@ def save_results_to_txt(model, filename='results.txt'):
 
     with open(filename, 'w', encoding='utf-8') as f:
         # Параметры модели
-        f.write("=" * 60 + "\n")
+        f.write("")
         f.write("МОДЕЛЬ СЕГРЕГАЦИИ ШЕЛЛИНГА - РЕЗУЛЬТАТЫ\n")
-        f.write("=" * 60 + "\n\n")
+        f.write("")
 
         f.write(f"Размер сетки: {model.size}×{model.size}\n")
         f.write(f"Количество агентов: {model.n_agents}\n")
