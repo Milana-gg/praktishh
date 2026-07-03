@@ -205,7 +205,6 @@ def save_benchmark_to_txt(tolerances, segregations, generations, filename='bench
 
 
 def create_animation_with_tolerance(tolerance):
-    """Создает анимацию с заданной терпимостью"""
 
     print(f"\n Запуск модели с терпимостью {tolerance:.2f}...")
 
@@ -215,7 +214,7 @@ def create_animation_with_tolerance(tolerance):
     initial_seg = model.calculate_segregation_index()
 
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5))
-
+    fig.canvas.manager.set_window_title("Мухина М.А БИС-24-2")
     colors = ['white', 'blue', 'red', 'green', 'orange', 'purple']
     cmap = ListedColormap(colors[:model.n_types + 1])
 
@@ -288,7 +287,6 @@ def create_animation_with_tolerance(tolerance):
 
         ax2.relim()
         ax2.autoscale_view(scalex=True, scaley=False)
-        # Устанавливаем правую границу с запасом
         ax2.set_xlim(0, max(current_gen + 5, 10))
         # принудительная перерисовка
         fig.canvas.draw_idle()
@@ -334,7 +332,6 @@ def build_tolerance_dependency():
 
     #создание фигуры с двумя графиками
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 5))
-
     #график 1: Зависимость сегрегации от терпимости
     ax1.plot(tolerances, final_segregations, 'bo-', linewidth=2, markersize=10)
     ax1.set_xlabel('Терпимость (tolerance)', fontsize=12)
@@ -360,6 +357,7 @@ def build_tolerance_dependency():
 
     plt.tight_layout()
     plt.savefig('segregation_vs_tolerance.png', dpi=150)
+    fig.canvas.manager.set_window_title(" Мухина М.А. БИС-24-2")
     plt.show()
 
     #сохранение результатов бенчмаркинга в текстовый файл
