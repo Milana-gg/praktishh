@@ -187,7 +187,6 @@ def save_results_to_txt(model, filename='results.txt'):
 
 
 def save_benchmark_to_txt(tolerances, segregations, generations, filename='benchmark.txt'):
-    """Сохранение результатов бенчмаркинга в текстовый файл"""
 
     with open(filename, 'w', encoding='utf-8') as f:
         f.write("")
@@ -306,7 +305,6 @@ def create_animation_with_tolerance(tolerance):
     return ani, fig, model
 
 def build_tolerance_dependency():
-    """Построение графика зависимости сегрегации от терпимости"""
 
     tolerances = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7]
     final_segregations = []
